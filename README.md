@@ -9,6 +9,6 @@ Open source assignment for Software Development Lifecycle SE-320
 # How to run?
 - Copy the DiceRoller.cpp file into any IDE that supports C++. Compile the code and run!
 
-# Issues| Unit Testing | Contributing
+# Issues | Unit Testing | Contributing
 - Issues will be labled under the 'Issues' tab at the tob of the github repository
 - 
