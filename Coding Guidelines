@@ -1,19 +1,1 @@
 # Coding Guidelines
-
-## Code Standards before Commiting:
-
-•	Readability and Consistency:
-o	Code easy to read and uses a consistent coding style.
-o	Variable and function names make sense with what they perform.
-•	Comments and Documentation:
-o	Comments to explain code and documentation (README).
-•	Functionality and Requirements:
-o	Check that code functions properly according to the requirements in the specifications.
-•	Error Handling:
-o	Properly handle errors and exceptions
-o	Log errors and display error messages.
-•	Testing:
-o	Verify that code has appropriate unit tests and has proper coverage, negative and positive.
-•	Code Organization:
-o	Check that code is organized into logical modules and class
-o	Check the functions are manageable and broken
