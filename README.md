@@ -6,7 +6,7 @@ Open source assignment for Software Development Lifecycle SE-320
 # CLI Dice Roller Game 🎲
 - This is going to be a simple dice roller game played in the users terminal, in which the user is able to roll dice, earn points, and then use those points to purchase upgrades go gain even more points! HOWEVER! The player can lose health from rolling 1s, so be careful!
 # How to run
-- Copy the files from the DiceRoller folder and run on the IDE of your choosing!
+- Copy the files from the `DiceRoller folder` and run on the IDE of your choosing!
 # Issues | Unit Testing | Contributing
 - Issues will be labled under the `Issues` tab at the tob of the github repository
 - Please edit `any necessary files` to accomodate any issue that you are trying to solve.
