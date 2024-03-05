@@ -8,7 +8,7 @@ Open source assignment for Software Development Lifecycle SE-320
 # How to run
 - Copy the files from the `DiceRoller` folder and run on the IDE of your choosing!
 - Compilation command: `clang++ *.cpp -o DiceRoller` or *however you compile on your IDE*
-- `./DiceRoller'
+- `./DiceRoller`
 - **Important note: There are a couple warnings when compiling due to gcc-11, but the program still runs as intended**
 # Issues | Unit Testing | Contributing
 - Issues will be labled under the `Issues` tab at the tob of the github repository
