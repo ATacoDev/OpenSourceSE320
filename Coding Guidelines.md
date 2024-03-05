@@ -12,3 +12,7 @@
 - Ensure to test code with given unit tests to make sure program still works
 - When merging, leave comments as to what issue you did and what you implemented
 - **Comment your name near code that you edited so it's clear where you worked**
+
+## Naming Conventions
+- Use all lowercase for 1 worded variables
+- Camel case for any functions or variables more than 1 word
