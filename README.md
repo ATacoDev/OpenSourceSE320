@@ -9,6 +9,7 @@ Open source assignment for Software Development Lifecycle SE-320
 - Copy the files from the `DiceRoller` folder and run on the IDE of your choosing!
 # Issues | Unit Testing | Contributing
 - Issues will be labled under the `Issues` tab at the tob of the github repository
+- If you see an issue you'd like to work on, **leave a comment saying that you would like to be responsible for that issue**
 - Please edit `any necessary files` to accomodate any issue that you are trying to solve.
 - After making your changes, perform a merge request with the additions you made, as well as comments as to what you were changing
 - I will review the merge request and ask any questions that may be necessary
