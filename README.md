@@ -14,7 +14,7 @@ Open source assignment for Software Development Lifecycle SE-320
 - Please edit the `DiceRoller.cpp` file to accomodate any issue that you are trying to solve.
 - After making your changes, perform a merge request with the additions you made, as well as comments as to what you were changing
 - I will review the merge request and ask any questions that may be necessary
-- Once these steps are completed, you're # Good!
+- Once these steps are completed, you're **Good!**
 
 # Questions ❓
 - Please either comment on specific issues, or visit `Discussions` to ask any other questions! I'll try my best to get back to you shortly on any quetsions you may have :D
