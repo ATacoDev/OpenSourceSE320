@@ -11,4 +11,6 @@ Open source assignment for Software Development Lifecycle SE-320
 
 # Issues | Unit Testing | Contributing
 - Issues will be labled under the 'Issues' tab at the tob of the github repository
-- 
+
+# Questions ❓
+- Please either comment on specific issues, or visit 'Discussions' to ask any other questions! I'll try my best to get back to you shortly on any quetsions you may have :D
