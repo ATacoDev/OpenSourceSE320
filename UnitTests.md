@@ -7,3 +7,5 @@
 
 ### **Issue:** Edits to rolling
 - When the user chooses option 1 to roll, the program should add both the roll + bonus points from buffs to the users points total
+- When the user chooses option 1 to roll, the program should also explicitely label how much of the total points they got was from the bonus
+  - Ex: User rolls a 3 and has lvl 2 points buff, the user should see something like: "+5 points! 3 from roll, 2 from buffs"
