@@ -17,7 +17,8 @@ Open source assignment for Software Development Lifecycle SE-320
 - After making your changes, perform a merge request with the additions you made, as well as comments as to what you were changing
 - I will review the merge request and ask any questions that may be necessary
 - Once these steps are completed, you're **Good!**
-- All unit tests should be labeled in `UnitTests`. You can check here to make sure the program is acting as intended
+- All unit tests should be labeled in `UnitTests.md`. You can check here to make sure the program is acting as intended
+    - Issue specific unit tests are also labeled within `UnitTests.md`
 
 # Questions ❓
 - Please either comment on specific issues, or visit `Discussions` to ask any other questions! I'll try my best to get back to you shortly on any quetsions you may have :D
