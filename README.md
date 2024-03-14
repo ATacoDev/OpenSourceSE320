@@ -1,5 +1,5 @@
 ## OpenSourceSE320
-Open source assignment for Software Development Lifecycle SE-320
+`Open source assignment for Software Development Lifecycle SE-320`
 
 <img width = "300" alt = "DiceGif" src = https://github.com/ATacoDev/OpenSourceSE320/assets/146070033/0d55f4c3-104f-4331-af1b-5a13140f6b9a>
 
