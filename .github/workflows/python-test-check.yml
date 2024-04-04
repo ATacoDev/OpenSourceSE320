@@ -25,7 +25,3 @@ jobs:
         pip install coverage
     - name: Github Action for testing the code
       run: coverage run -m unittest discover
-
-    - name: Github Action to retrieve coverage percentage
-      id: total-coverage
-      run: coverage report
