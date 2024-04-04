@@ -1,0 +1,17 @@
+name: C++ Example
+
+on: [push]
+
+jobs:
+  cpp-example:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Compile C++ program
+      run: clang++ -o my_program main.cpp
+      
+    - name: Run C++ program
+      run: ./my_program
