@@ -6,8 +6,6 @@ env:
   MIN_COVERAGE_REQUIRED: 75
 
 jobs:
-  build:
-    name: Python Test 
   python-test-check:
     runs-on: ubuntu-latest
 
