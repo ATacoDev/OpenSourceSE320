@@ -34,7 +34,12 @@ jobs:
       id: total-coverage
       run: |
         if [ -f .coverage ]; then
-          coverage json -q -o /dev/stdout | python -c 'import sys, json; perc_cov = json.load(sys.stdin)["totals"]["percent_covered"]; is_covered = perc_cov >= '$MIN_COVERAGE_REQUIRED'; print("Coverage is: ", perc_cov); sys.exit(not is_covered)'
+          coverage report -m  # Generate coverage report
+          coverage json -q -o coverage.json || echo "Failed to generate JSON report"
+          coverage_percentage=$(coverage report | awk 'NR==2{print substr($4, 1, length($4)-1)}')
+          is_covered=$(awk 'BEGIN{print "'"$coverage_percentage"'" >= ENVIRON["MIN_COVERAGE_REQUIRED"] ? "true" : "false"}')
+          echo "Coverage is: $coverage_percentage"
+          echo "::set-output name=is_covered::$is_covered"
         else
           echo "No coverage data collected."
           exit 1
