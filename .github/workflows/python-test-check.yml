@@ -27,6 +27,10 @@ jobs:
     - name: Run tests with coverage
       run: |
         coverage run -m unittest discover
+        echo "Coverage data files:"
+        ls -l .coverage*  # List coverage data files for debugging
 
     - name: Generate coverage report
-      run: coverage report -m
+      run: |
+        echo "Running coverage report..."
+        coverage report -m
