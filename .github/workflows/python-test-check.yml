@@ -10,16 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Use Node.js 20
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-
     - name: Checkout repository
-      uses: actions/checkout@v1
+      uses: actions/checkout@v3
     
     - name: Set up Python 3.7
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
       with:
         python-version: 3.7
 
@@ -28,12 +23,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install coverage
+    - name: Github Action for testing the code
+      run: coverage run -m unittest discover
 
-    - name: Run tests with coverage
-      run: |
-        coverage run -m unittest discover
-        echo "Coverage data files:"
-        ls -l .coverage*
-
-    - name: Generate coverage report
-      run: coverage report -m
+    - name: Github Action to retrieve coverage percentage
+      id: total-coverage
+      run: coverage report
