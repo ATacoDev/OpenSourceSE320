@@ -30,8 +30,12 @@ jobs:
         echo "Coverage data files:"
         ls -l .coverage*  # List coverage data files for debugging
 
-    - name: Github Action to retrieve coverage percentage
+    - name: Calculate coverage percentage
       id: total-coverage
       run: |
-        coverage json -q -o /dev/stdout | python -c 'import sys, json; perc_cov = json.load(sys.stdin)["totals"]["percent_covered"]; is_covered = perc_cov >= '$MIN_COVERAGE_REQUIRED'; print("Coverage is: ", perc_cov); sys.exit(not is_covered)'
-        
+        if [ -f .coverage ]; then
+          coverage json -q -o /dev/stdout | python -c 'import sys, json; perc_cov = json.load(sys.stdin)["totals"]["percent_covered"]; is_covered = perc_cov >= '$MIN_COVERAGE_REQUIRED'; print("Coverage is: ", perc_cov); sys.exit(not is_covered)'
+        else
+          echo "No coverage data collected."
+          exit 1
+        fi
