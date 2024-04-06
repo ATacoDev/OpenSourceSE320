@@ -14,6 +14,9 @@ class shop {
     
     void showUpgrades();
     void enterShop();
+    void printRollBuff();
+
+    int getBuffPoints();
 
 };
 
