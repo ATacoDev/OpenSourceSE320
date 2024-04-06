@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Compile C++ Code
-        run: clang++ *.cpp -o DiceRoller
+        run: clang++ *.cpp -o OpenSourceSE320
 
       - name: Run Tests
-        run: ./DiceRoller
+        run: ./OpenSourceSE320
