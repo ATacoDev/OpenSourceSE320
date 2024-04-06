@@ -1,9 +1,15 @@
-#include <iostream>
 #include "shop.h"
 
+shop::shop() {
+    // Initialize upgrades
+    upgrades.push_back(upgrade(0, 0, "Buff Points", "Increases points gained from rolls"));
+    upgrades.push_back(upgrade(0, 0, "Buff Health", "Increases health gained from rolls")); // Fix: Add an additional argument for the level
+}
+
 void shop::showUpgrades() {
+    cout << "Available Upgrades:" << endl;
     cout << endl;
-    for (int i = 0; i < 2; i++) {
+    for (size_t i = 0; i < upgrades.size(); ++i) {
         cout << i + 1 << ") " << upgrades[i].name << endl;
         cout << "Cost: " << upgrades[i].cost << endl;
         cout << "Description: " << upgrades[i].description << endl;
@@ -12,7 +18,7 @@ void shop::showUpgrades() {
     }
 }
 
-void shop::printRollBuff() { // used for showing how much was gained from the upgrades during rolls
+void shop::printRollBuff() {
     cout << "Additional gained from buff: {" << upgrades[0].level << "}" << endl;
 }
 
@@ -21,30 +27,22 @@ void shop::enterShop() {
     showUpgrades();
     int choice = 0;
     while (choice != -1) {
-        cout << "Enter an option 1 - 3 (3 to show upgrades | -1 to leave shop) ";
+        cout << "Enter an option 1 - " << upgrades.size() << " (" << upgrades.size() << " to show upgrades | -1 to leave shop): ";
         cin >> choice;
-        switch (choice) {
-        case 1:
-            cout << "You have chosen Buff Points" << endl;
-            upgrades[0].level++;
-            break;
-        case 2:
-            cout << "You have chosen Buff Health" << endl;
-            upgrades[1].level++;
-            break;
-        case 3:
+        if (choice >= 1 && choice <= upgrades.size()) {
+            cout << "You have chosen " << upgrades[choice - 1].name << endl;
+            upgrades[choice - 1].level++;
+        } else if (choice == upgrades.size() + 1) {
             showUpgrades();
-            break;
-        case -1: // exit shop
-            cout << "Exiting shop" << endl;
-            break;
-        default:
+        } else if (choice != -1) {
             cout << "Invalid choice." << endl;
-            break;
         }
     }
 }
 
 int shop::getBuffPoints() {
-    return upgrades[0].level;
+    if (!upgrades.empty()) {
+        return upgrades[0].level;
+    }
+    return 0;
 }
