@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  lint:
     name: Lint Code Base
     runs-on: ubuntu-latest
 
@@ -14,16 +14,20 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      
+
       - name: Install Clang-Format
         run: sudo apt-get install clang-format
 
-      - name: Clang-Format
+      - name: Format C++ Files
         run: |
           clang-format --version
-          clang-format -i --style=file **/*.cpp **/*.h  # Format all .cpp and .h files recursively
+          find . -name "*.cpp" -o -name "*.h" -exec clang-format -i --style=file {} +
 
-      - name: Lint Code Base
+      - name: Exclude GitHub Actions Workflows
+        run: |
+          find . -path './.github/workflows/*.yml' -exec rm -f {} +
+
+      - name: Lint Code
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: false
