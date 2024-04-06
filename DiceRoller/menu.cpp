@@ -28,7 +28,7 @@ void menu::showMenu() // in charge of prompting the menu. Will work with the eco
                 cout << "You rolled a " << roll << " and gained " << roll << " POINTS! " << endl;
                 s.printRollBuff();
                 p.addPoints(roll);
-                p.addPoints(s.getBuffPoints()); // adds the amount gained from the buff
+                p.addPoints(s.getBuffPoints()); // adds the amount gained from the buff (Done as part of Open Source Contribution Assignment by Jaden J)
                 cout << endl;
                 break;  
             case 2: // Upgrades
