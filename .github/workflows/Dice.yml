@@ -1,10 +1,10 @@
-name: DiceLinter
+name: DiceRoller
 
 on: [push]
 
 jobs:
   build:
-    name: DiceLinter
+    name: DiceRoller
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Compile C++ Code
-        run: clang++ *.cpp -o DiceRoller
+        run: g++ *.cpp -o DiceRoller
 
       - name: Run Tests
         run: ./DiceRoller -test
