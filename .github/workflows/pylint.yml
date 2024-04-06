@@ -2,32 +2,33 @@ name: Lint Code Base
 
 on:
   push:
+    branches:
+      - main
+      - master
   pull_request:
+    branches:
+      - main
+      - master
 
 jobs:
   lint:
-    name: Lint Code Base
+    name: Lint C++ Code
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      - name: Install Clang-Format
-        run: sudo apt-get install clang-format
-
-      - name: Format C++ Files
+      - name: Set up Clang tools
         run: |
-          clang-format --version
-          find . -name "*.cpp" -o -name "*.h" -exec clang-format -i --style=file {} +
+          sudo apt-get update
+          sudo apt-get install -y clang
 
-      - name: Exclude GitHub Actions Workflows
+      - name: Run Clang-Tidy
         run: |
-          find . -path './.github/workflows/*.yml' -exec rm -f {} +
+          # Run clang-tidy on all .cpp and .h files in the repository
+          find . -name "*.cpp" -o -name "*.h" | xargs clang-tidy
 
-      - name: Lint Code
-        uses: github/super-linter@v4
-        env:
-          VALIDATE_ALL_CODEBASE: false
+      - name: Display Results
+        run: |
+          echo "Clang-Tidy Analysis Completed"
