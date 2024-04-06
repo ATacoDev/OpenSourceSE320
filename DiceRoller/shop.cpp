@@ -12,6 +12,10 @@ void shop::showUpgrades() {
     }
 }
 
+void shop::printRollBuff() { // used for showing how much was gained from the upgrades during rolls
+    cout << "Additional gained from buff: {" << upgrades[0].level << "}" << endl;
+}
+
 void shop::enterShop() {
     cout << "Welcome to the shop!" << endl;
     showUpgrades();
@@ -39,4 +43,8 @@ void shop::enterShop() {
             break;
         }
     }
+}
+
+int shop::getBuffPoints() {
+    return upgrades[0].level;
 }
