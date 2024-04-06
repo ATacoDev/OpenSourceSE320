@@ -25,10 +25,8 @@ void menu::showMenu() // in charge of prompting the menu. Will work with the eco
                 cout << "~~~~~~~~~~~~~~~~~~" << endl;
                 cout << "Rolling the dice!" << endl;
                 roll = rand() % 6 + 1;
-                cout << "You rolled a " << roll << " and gained " << roll << " POINTS! " << endl;
-                s.printRollBuff();
+                cout << "You rolled a " << roll << endl;
                 p.addPoints(roll);
-                p.addPoints(s.getBuffPoints()); // adds the amount gained from the buff
                 cout << endl;
                 break;  
             case 2: // Upgrades
