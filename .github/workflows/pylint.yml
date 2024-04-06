@@ -15,6 +15,14 @@ jobs:
         with:
           fetch-depth: 0
       
+      - name: Install Clang-Format
+        run: sudo apt-get install clang-format
+
+      - name: Clang-Format
+        run: |
+          clang-format --version
+          clang-format -i --style=file **/*.cpp **/*.h  # Format all .cpp and .h files recursively
+
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
