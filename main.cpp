@@ -3,7 +3,14 @@
 
 int main() {
 
+    bool unitTestFlag = true;
     menu m;
-    m.showMenu();
+    if (unitTestFlag) {
+        m.testRun();
+    } else {
+        m.showMenu();
+    }
+
+    // m.showMenu();
     
 }

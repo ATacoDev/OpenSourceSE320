@@ -3,6 +3,27 @@
 #include "player.h"
 #include "shop.h"
 
+void menu::testRun() // test run to see if the menu is working
+{
+    cout << "Unit Test:" << endl;
+    player p;
+    shop s;
+    srand(time(0));
+    int choice = 0;
+    int roll = 0;
+
+    cout << "Rolling the dice!" << endl;
+                roll = rand() % 6 + 1;
+                cout << "You rolled a " << roll << " and gained " << roll << " POINTS! " << endl;
+                s.printRollBuff();
+                p.addPoints(roll);
+                p.addPoints(s.getBuffPoints()); // adds the amount gained from the buff
+                cout << endl;
+
+    p.showStats();
+    cout << "Test run completed!" << endl;
+}
+
 void menu::showMenu() // in charge of prompting the menu. Will work with the economy class to handle the user's points and upgrades
 {
     player p;
