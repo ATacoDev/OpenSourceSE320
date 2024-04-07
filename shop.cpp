@@ -20,6 +20,7 @@ void shop::showUpgrades() {
 
 void shop::printRollBuff() {
     cout << "Additional gained from buff: {" << upgrades[0].level << "}" << endl;
+    feaifijdashf
 }
 
 void shop::enterShop() {
