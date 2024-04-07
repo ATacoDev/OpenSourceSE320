@@ -26,11 +26,12 @@ jobs:
 
       - name: Run Clang-Tidy (Linting)
         run: |
-          clang-tidy main.cpp -- -std=c++11
+          clang-tidy /home/runner/work/OpenSourceSE320/main.cpp -- -std=c++11
 
       - name: Compile C++ Program
         run: |
-          clang++ -o my_program main.cpp
+          clang++ -o my_program /home/runner/work/OpenSourceSE320/main.cpp
 
       - name: Run C++ Program
-        run: ./my_program
+        run: |
+          ./my_program
