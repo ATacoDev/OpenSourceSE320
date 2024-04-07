@@ -16,6 +16,6 @@ jobs:
       - name: Compile C++ Code
         run: g++ *.cpp -o DiceRoller
 
-      - name: Run Program Interactively
+      - name: Test Program
         run: |
           ./DiceRoller
