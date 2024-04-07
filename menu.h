@@ -7,6 +7,7 @@ class menu {
 
     public:
     void showMenu();
+    void testRun();
 
 };
 
