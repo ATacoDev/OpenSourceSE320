@@ -1,0 +1,21 @@
+name: DiceRoller
+
+on: [push]
+
+jobs:
+  build:
+    name: DiceRoller
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Compile C++ Code
+        run: g++ *.cpp -o DiceRoller
+
+      - name: Run Tests
+        run: ./DiceRoller -test
