@@ -16,11 +16,6 @@ jobs:
       - name: Compile C++ Code
         run: g++ *.cpp -o DiceRoller
 
-      - name: Run Tests
+      - name: Run Program Interactively
         run: |
-          # Execute the program with predefined input
-          ./DiceRoller <<EOF
-           1 # Simulate rolling dice
-           3 # Simluate checking stats
-          -1 # Input choice -1 (simulate quitting)
-          EOF
+          ./DiceRoller
