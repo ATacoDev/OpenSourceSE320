@@ -1,6 +1,9 @@
 name: DiceRoller
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -13,9 +16,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install clang-tidy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang-tidy
+
       - name: Compile C++ Code
         run: g++ *.cpp -o DiceRoller
 
       - name: Test Program
         run: |
           ./DiceRoller
+
+      - name: Run clang-tidy
+        run: |
+          clang-tidy *.cpp -- -std=c++11
