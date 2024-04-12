@@ -28,6 +28,6 @@ jobs:
         run: |
           ./DiceRoller
 
-      - name: Run clang-tidy
+      - name: Run Linter
         run: |
           clang-tidy *.cpp -checks=bugprone-*,modernize-*,performance-* -- -std=c++11
