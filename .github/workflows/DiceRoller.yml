@@ -31,4 +31,3 @@ jobs:
       - name: Run clang-tidy
         run: |
           clang-tidy *.cpp -checks=bugprone-*,modernize-*,performance-* -- -std=c++11
-
