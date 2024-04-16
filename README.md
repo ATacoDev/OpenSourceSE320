@@ -6,7 +6,7 @@
 # CLI Dice Roller Game 🎲
 - This is going to be a simple dice roller game played in the users terminal, in which the user is able to roll dice, earn points, and then use those points to purchase upgrades go gain even more points! HOWEVER! The player can lose health from rolling 1s, so be careful!
 # How to run
-- Copy the files from the `DiceRoller` folder and run on the IDE of your choosing!
+- Copy all .cpp files from the repo
 - Compilation command: `clang++ *.cpp -o DiceRoller` or *however you compile on your IDE*
 - `./DiceRoller`
 - **Important note: There are a couple warnings when compiling due to gcc-11, but the program still runs as intended**
