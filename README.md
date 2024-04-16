@@ -10,7 +10,7 @@
     - This can easily be done by:
         - Going into my repository and copying this link
           
-          <img width="300" alt="GitCloneExplanation" src="https://github.com/ATacoDev/OpenSourceSE320/assets/146070033/a4cf1527-afc1-45ec-9d7e-a1f7bb37733d">
+          <img width="300" alt="GitCloneExplanation" src="https://github.com/ATacoDev/OpenSourceSE320/assets/146070033/343c4540-d282-4d9a-8229-ceb8373c2026">
         - Opening Terminal
         - cd'ing into the folder where you will be keeping these files
         - type git clone `<link that you copied>`
