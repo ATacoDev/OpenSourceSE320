@@ -8,9 +8,11 @@
 # How to run
 - Copy all .cpp files from the repo
     - This can easily be done by:
-        - Going into my repository 
+        - Going into my repository and copying this link
+          <img width="300" alt="GitCloneExplanation" src="https://github.com/ATacoDev/OpenSourceSE320/assets/146070033/a4cf1527-afc1-45ec-9d7e-a1f7bb37733d">
         - Opening Terminal
         - cd'ing into the folder where you will be keeping these files
+        - type git clone `<link that you copied>`
 - Compilation command: `g++ *.cpp -o DiceRoller` or *however you compile on your IDE*
 - `./DiceRoller`
 - **Important note: There are a couple warnings when compiling due to gcc-11, but the program still runs as intended**
