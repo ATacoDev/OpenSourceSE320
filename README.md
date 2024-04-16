@@ -8,7 +8,7 @@
 # How to run
 - Copy all .cpp files from the repo
     - This can easily be done by:
-        - Going into my repository and copying this link under the `HTML` tab
+        - Going into my repository and copying this link under the `HTTPS` tab
           
           <img width="300" alt="GitCloneExplanation" src="https://github.com/ATacoDev/OpenSourceSE320/assets/146070033/343c4540-d282-4d9a-8229-ceb8373c2026">
         - Opening Terminal
