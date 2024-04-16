@@ -14,6 +14,7 @@
         - Opening Terminal
         - cd'ing into the folder where you will be keeping these files
         - type git clone `<link that you copied>`
+- At this point, you can fork the repository, make your changes, and then make a pull request :D
 - Compilation command: `g++ *.cpp -o DiceRoller` or *however you compile on your IDE*
 - `./DiceRoller`
 - **Important note: There are a couple warnings when compiling due to gcc-11, but the program still runs as intended**
