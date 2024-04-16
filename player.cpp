@@ -1,6 +1,7 @@
 #include <iostream>
 #include "player.h"
 
+//hello
 void player::addPoints(int amount) {
     points += amount;
 }
