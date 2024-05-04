@@ -3,7 +3,7 @@
 
 int main() {
 
-    bool unitTestFlag = true;
+    bool unitTestFlag = false;
     menu m;
     if (unitTestFlag) {
         m.testRun();
