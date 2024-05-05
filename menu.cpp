@@ -33,6 +33,15 @@ void menu::showMenu() // in charge of prompting the menu. Will work with the eco
     int roll = 0;
     while (choice != -1) {
 
+        //when player dies
+        if (p.health == 0){
+            printf("You have lost all your health :(\n");
+            printf("Final Stats: \n");
+            p.showStats();
+            printf("Thanks for playing!\n");
+            break;
+        }
+
         cout << "1. Roll the dice" << endl;
         cout << "2. Upgrades" << endl;
         cout << "3. Check your stats" << endl;
@@ -47,6 +56,11 @@ void menu::showMenu() // in charge of prompting the menu. Will work with the eco
                 cout << "Rolling the dice!" << endl;
                 roll = rand() % 6 + 1;
                 cout << "You rolled a " << roll << " and gained " << roll << " POINTS! " << endl;
+                //if player rolls a 1, they lose 5 points
+                if (roll == 1){
+                    p.removeHealth(5);
+                    printf("You also lose 5 Health :(\n");
+                }
                 s.printRollBuff();
                 p.addPoints(roll);
                 p.addPoints(s.getBuffPoints()); // adds the amount gained from the buff
